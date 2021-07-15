@@ -24,4 +24,17 @@ addons:
     packages:
     - gcc@9
 
-script: true
+jobs:
+  include:
+    - stage: test
+      name: check-apple-gcc
+      os: osx
+      osx_image: xcode12u
+      script: true
+      
+    # Test that the project builds and tests successfully on OSX with Apple Clang
+    - stage: test
+      name: check-apple-clang
+      os: osx
+      osx_image: xcode12u
+      script: true
