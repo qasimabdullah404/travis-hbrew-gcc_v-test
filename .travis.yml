@@ -29,12 +29,12 @@ jobs:
     - stage: test
       name: check-apple-gcc
       os: osx
-      osx_image: xcode12u
+      osx_image: xcode12
       script: true
       
     # Test that the project builds and tests successfully on OSX with Apple Clang
     - stage: test
       name: check-apple-clang
       os: osx
-      osx_image: xcode12u
+      osx_image: xcode12
       script: true
