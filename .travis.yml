@@ -4,7 +4,6 @@ language: cpp
 
 addons:
   homebrew:
-    update: true
     packages:
     - gcc@9
 
@@ -13,12 +12,5 @@ jobs:
     - stage: test
       name: check-apple-gcc
       os: osx
-      osx_image: xcode12
-      script: true
-      
-    # Test that the project builds and tests successfully on OSX with Apple Clang
-    - stage: test
-      name: check-apple-clang
-      os: osx
-      osx_image: xcode12
+      osx_image: xcode12.5
       script: true
